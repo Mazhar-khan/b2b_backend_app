@@ -43,6 +43,7 @@ export const config: VendureConfig = {
           secret: process.env.COOKIE_SECRET,
         },
     },
+    //
     dbConnectionOptions: {
         type: 'mysql',
         // See the README.md "Migrations" section for an explanation of
