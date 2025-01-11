@@ -47,7 +47,8 @@ export const config: VendureConfig = {
         type: 'mysql',
         // See the README.md "Migrations" section for an explanation of
         // the `synchronize` and `migrations` options.
-        synchronize: false,
+        driver: require('mysql2'),
+        synchronize: true,
         migrations: [path.join(__dirname, './migrations/*.+(js|ts)')],
         logging: false,
         database: process.env.DB_NAME,
