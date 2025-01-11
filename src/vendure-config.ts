@@ -19,7 +19,12 @@ const serverPort = +process.env.PORT || 3000;
 
 export const config: VendureConfig = {
   apiOptions: {
-    port: serverPort,
+    port: 10000,
+    cors: {
+        origin: ['https://b2b-backend-app-1.onrender.com'], // Allow your admin interface origin
+        methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+        credentials: true,
+    },
     adminApiPath: "admin-api",
     shopApiPath: "shop-api",
     // The following options are useful in development mode,
