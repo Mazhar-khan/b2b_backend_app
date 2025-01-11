@@ -98,7 +98,7 @@ export const config: VendureConfig = {
         //     },
         // }),
         AdminUiPlugin.init({
-            route: 'admin', // The route for the admin UI
+            route: 'https://b2b-backend-app-1.onrender.com/admin', // The route for the admin UI
             port: serverPort + 2, // Local development port (optional for production)
             adminUiConfig: {
                 apiPort: serverPort, // Port for the Admin API (useful for local development)
