@@ -17,7 +17,7 @@ const serverPort = +process.env.PORT || 3000;
 export const config: VendureConfig = {
     apiOptions: {
         port: serverPort,
-        adminApiPath: 'https://b2b-backend-app-1.onrender.com/admin-api',
+        adminApiPath: 'admin-api',
         shopApiPath: 'shop-api',
         // The following options are useful in development mode,
         // but are best turned off for production for security
@@ -90,20 +90,13 @@ export const config: VendureConfig = {
                 changeEmailAddressUrl: 'http://localhost:8080/verify-email-address-change'
             },
         }),
-        // AdminUiPlugin.init({
-        //     route: 'admin',
-        //     port: serverPort + 2,
-        //     adminUiConfig: {
-        //         apiPort: serverPort,
-        //     },
-        // }),
         AdminUiPlugin.init({
-            route: 'https://b2b-backend-app-1.onrender.com/admin', // The route for the admin UI
-            port: serverPort + 2, // Local development port (optional for production)
+            route: 'admin',
+            port: serverPort + 2,
             adminUiConfig: {
-                apiPort: serverPort, // Port for the Admin API (useful for local development)
-                adminApiPath: 'https://b2b-backend-app-1.onrender.com/admin-api', // Path for Admin API
+                apiPort: serverPort,
             },
-        })
+        }),
+
     ],
 };
