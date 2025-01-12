@@ -17,8 +17,8 @@ const serverPort = +process.env.PORT || 3000;
 export const config: VendureConfig = {
     apiOptions: {
         port: +(process.env.PORT || 3000),
-        adminApiPath: 'https://b2b-backend-app-1.onrender.com/admin-api',
-        shopApiPath: 'https://b2b-backend-app-1.onrender.com/shop-api',
+        adminApiPath: 'admin-api',
+        shopApiPath: 'shop-api',
         // The following options are useful in development mode,
         // but are best turned off for production for security
         // reasons.
@@ -33,6 +33,7 @@ export const config: VendureConfig = {
             shopApiDebug: true,
         } : {}),
     },
+
     authOptions: {
         tokenMethod: ['bearer', 'cookie'],
         superadminCredentials: {
