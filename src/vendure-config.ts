@@ -19,13 +19,7 @@ export const config: VendureConfig = {
         port: +(process.env.PORT || 3000),
         adminApiPath: 'admin-api',
         shopApiPath: 'shop-api',
-        cors :{
-            origin: [
-                'https://b2b-backend-app-1.onrender.com', // Allow your production frontend. Replace with the correct domain.
-            ],
-            methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Specify the methods to allow
-            allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
-        },
+        cors :{origin: true, credentials: true },
         // The following options are useful in development mode,
         // but are best turned off for production for security
         // reasons.
