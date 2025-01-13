@@ -105,8 +105,9 @@ export const config: VendureConfig = {
       route: "admin",
       port: +process.env.PORT,
       adminUiConfig: {
-        apiHost: "https://b2b-backend-app-1.onrender.com", // Public Render URL
-        apiPort: +process.env.PORT, // Ensure it points to the main server port
+        adminApiPath:'admin-api',
+        apiHost:process.env.PUBLIC_URL || "https://b2b-backend-app-1.onrender.com", // Public Render URL
+        apiPort: 443, // Ensure it points to the main server port
       },
     }),
   ],
