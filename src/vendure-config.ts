@@ -16,10 +16,13 @@ const serverPort = +process.env.PORT || 3000;
 
 export const config: VendureConfig = {
     apiOptions: {
-        port: +(process.env.PORT || 3000),
+        port: serverPort,
         adminApiPath: 'admin-api',
         shopApiPath: 'shop-api',
-        cors :{origin: true, credentials: true },
+        cors: {
+            origin: ['https://b2b-backend-app-1.onrender.com'],
+            credentials: true,
+        },
         // The following options are useful in development mode,
         // but are best turned off for production for security
         // reasons.
@@ -96,7 +99,9 @@ export const config: VendureConfig = {
             route: 'admin',
             port: serverPort + 2,
             adminUiConfig: {
-                apiPort: serverPort,
+                apiHost:'https://b2b-backend-app-1.onrender.com',
+                apiPort: 10000,
+                adminApiPath:'admin-api'
             },
         }),
 
